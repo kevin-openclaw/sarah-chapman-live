@@ -130,6 +130,7 @@ footer .sarah-quote{font-family:var(--mono);margin-bottom:16px;color:var(--accen
       <li><a href="#discography">Discography</a></li>
       <li><a href="#flyers">Flyers</a></li>
       <li><a href="#photos">Photos</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
   <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -359,6 +360,69 @@ Explore Her Pedigree
   </div>
 </section>
 
+<!-- Contact Section -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-envelope"></i> Contact</div>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">Whether you're looking to book Sarah for your event, discuss a remix, or just want to connect—we'd love to hear from you.</p>
+    
+    <div style="max-width:600px;margin:0 auto">
+      <form id="contactForm" style="background:var(--bg2);border-radius:var(--radius);padding:40px;border-left:4px solid var(--accent)">
+        <div style="margin-bottom:24px">
+          <label for="contactType" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Contact Type</label>
+          <select id="contactType" name="contactType" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font)">
+            <option value="">Select inquiry type...</option>
+            <option value="contact">General Contact</option>
+            <option value="booking">DJ Booking</option>
+            <option value="remix">Remix Request</option>
+          </select>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px">
+          <div>
+            <label for="name" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Name</label>
+            <input type="text" id="name" name="name" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font)">
+          </div>
+          <div>
+            <label for="email" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Email</label>
+            <input type="email" id="email" name="email" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font)">
+          </div>
+        </div>
+        
+        <div style="margin-bottom:24px">
+          <label for="subject" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Subject</label>
+          <input type="text" id="subject" name="subject" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font)">
+        </div>
+        
+        <div style="margin-bottom:32px">
+          <label for="message" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Message</label>
+          <textarea id="message" name="message" rows="6" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font);resize:vertical"></textarea>
+        </div>
+        
+        <button type="submit" style="width:100%;padding:16px;background:var(--grad);border:none;border-radius:50px;color:#fff;font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s;font-family:var(--font)">
+          <i class="fas fa-paper-plane" style="margin-right:8px"></i>
+          Send Message
+        </button>
+      </form>
+      
+      <div style="text-align:center;margin-top:32px;padding:24px;background:rgba(255,0,128,0.05);border-radius:var(--radius);border:1px solid rgba(255,0,128,0.2)">
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">
+          <i class="fas fa-info-circle" style="color:var(--accent);margin-right:8px"></i>
+          Professional Inquiries
+        </h3>
+        <p style="color:var(--text-dim);margin-bottom:16px">
+          For DJ bookings, remix requests, and professional collaborations
+        </p>
+        <p style="color:var(--accent);font-weight:600">
+          <i class="fas fa-envelope" style="margin-right:8px"></i>
+          sarah@djsarahchapman.com
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
   <p class="sarah-quote">"From the dance floor to 30,000 feet—always reaching new heights"</p>
@@ -398,6 +462,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
+});
+
+// Contact form handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formData = new FormData(this);
+  const data = {
+    contactType: formData.get('contactType'),
+    name: formData.get('name'),
+    email: formData.get('email'),
+    subject: formData.get('subject'),
+    message: formData.get('message')
+  };
+  
+  // Update button state
+  const button = this.querySelector('button[type="submit"]');
+  const originalText = button.innerHTML;
+  button.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:8px"></i>Sending...';
+  button.disabled = true;
+  
+  // Simulate form submission (replace with actual endpoint later)
+  setTimeout(() => {
+    alert(`Thank you ${data.name}! Your ${data.contactType} inquiry has been received. We'll get back to you at ${data.email} soon.`);
+    this.reset();
+    button.innerHTML = originalText;
+    button.disabled = false;
+  }, 2000);
 });
 </script>
 
