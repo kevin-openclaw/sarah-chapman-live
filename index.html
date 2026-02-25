@@ -92,6 +92,34 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:
   text-decoration:none;transition:all .3s;font-size:1rem}
 .hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,0,128,.3)}
 
+/* Under Construction Notice */
+.construction-notice {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.construction-notice span {
+  background: rgba(255,0,128,0.1);
+  border: 2px solid var(--accent);
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  animation: constructionPulse 3s ease-in-out infinite;
+}
+
+@keyframes constructionPulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
 /* Sections */
 .section{padding:80px 24px}
 .container{max-width:1200px;margin:0 auto}
@@ -205,7 +233,10 @@ footer .mini-socials a:hover i{color:var(--text-bright);transform:translateY(-2p
   .logo{font-size:1rem}
   .section{padding:30px 12px}
   .hero{padding:90px 12px 30px}
-
+  
+  /* Construction notice mobile adjustments */
+  .construction-notice{top:15%}
+  .construction-notice span{font-size:0.75rem;padding:6px 12px}
   
   /* Ensure readability on very small screens */
   .hero-title{font-size:clamp(2rem,8vw,3rem)}
@@ -252,7 +283,10 @@ footer .mini-socials a:hover i{color:var(--text-bright);transform:translateY(-2p
 
 <!-- Hero Section -->
 <section class="hero">
-
+  <!-- Under Construction Notice -->
+  <div class="construction-notice">
+    <span>Site Under Construction</span>
+  </div>
   
   <div class="hero-content">
     <h1 class="hero-title">Sarah Chapman</h1>
