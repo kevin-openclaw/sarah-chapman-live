@@ -104,6 +104,13 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:
 .gallery-title{font-weight:600;color:var(--text-bright);margin-bottom:8px}
 .gallery-desc{color:var(--text-dim);font-size:.9rem}
 
+/* Scroll Down */
+.hero-scroll{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);
+  color:var(--text-dim);font-size:.75rem;display:flex;flex-direction:column;align-items:center;gap:8px;
+  animation:bob 2s ease-in-out infinite;cursor:pointer;transition:color .2s}
+.hero-scroll:hover{color:var(--text-bright)}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
 /* Footer */
 footer{padding:60px 24px;text-align:center;border-top:1px solid rgba(255,0,128,.1);color:var(--text-dim)}
 footer .sarah-quote{font-family:var(--mono);margin-bottom:16px;color:var(--accent);font-style:italic}
@@ -121,6 +128,7 @@ footer .mini-socials a:hover i{color:var(--text-bright);transform:translateY(-2p
 @media (max-width: 768px) {
   .nav-links{display:none}
   .nav-right{gap:16px}
+  .hero-scroll{display:none}
   .timeline::before{left:20px}
   .timeline-item,.timeline-item:nth-child(even){flex-direction:column}
   .timeline-content{width:calc(100% - 60px);margin-left:60px}
@@ -166,6 +174,10 @@ footer .mini-socials a:hover i{color:var(--text-bright);transform:translateY(-2p
       <i class="fas fa-music"></i>
 Explore Her Pedigree
     </a>
+  </div>
+  <div class="hero-scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    scroll on down
+    <i class="fas fa-chevron-down"></i>
   </div>
 </section>
 
