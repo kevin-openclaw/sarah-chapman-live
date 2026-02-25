@@ -104,6 +104,19 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:
 .gallery-title{font-weight:600;color:var(--text-bright);margin-bottom:8px}
 .gallery-desc{color:var(--text-dim);font-size:.9rem}
 
+/* Mobile Menu */
+.mobile-menu-toggle{display:none;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.06);align-items:center;justify-content:center;
+  cursor:pointer;transition:all .3s;color:var(--text-dim);font-size:1.1rem;margin-left:12px}
+.mobile-menu-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);
+  border-top:1px solid rgba(255,0,128,.2);backdrop-filter:blur(20px);padding:16px 0}
+.mobile-menu a{display:block;padding:12px 24px;color:var(--text-dim);text-decoration:none;
+  font-weight:500;transition:all .2s;border-bottom:1px solid rgba(255,255,255,.05)}
+.mobile-menu a:hover{color:var(--accent);background:rgba(255,0,128,.05)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.show{display:block}
+
 /* Scroll Down */
 .hero-scroll{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);
   color:var(--text-dim);font-size:.75rem;display:flex;flex-direction:column;align-items:center;gap:8px;
@@ -127,8 +140,9 @@ footer .mini-socials a:hover i{color:var(--text-bright);transform:translateY(-2p
 }
 @media (max-width: 768px) {
   .nav-links{display:none}
+  .mobile-menu-toggle{display:flex}
   .nav-right{gap:16px}
-  .hero-scroll{display:none}
+  .hero-scroll{bottom:60px;font-size:0.7rem}
   .timeline::before{left:20px}
   .timeline-item,.timeline-item:nth-child(even){flex-direction:column}
   .timeline-content{width:calc(100% - 60px);margin-left:60px}
@@ -161,6 +175,19 @@ footer .mini-socials a:hover i{color:var(--text-bright);transform:translateY(-2p
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
       <i class="fas fa-sun" id="themeIcon"></i>
     </button>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#residencies">Residencies</a>
+    <a href="#radio">Radio</a>
+    <a href="#discography">Discography</a>
+    <a href="#flyers">Flyers</a>
+    <a href="#photos">Photos</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -659,6 +686,22 @@ function toggleTheme() {
   currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
   setTheme(currentTheme);
 }
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('show');
+}
+
+// Close mobile menu when clicking a link
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileLinks = document.querySelectorAll('.mobile-menu a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.remove('show');
+    });
+  });
+});
 
 // Load saved theme
 const savedTheme = localStorage.getItem('sarah-theme');
