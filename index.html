@@ -3,264 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DJ Sarah Chapman — Brighton House Pioneer • From Bognor to Magaluf</title>
-<meta name="description" content="DJ Sarah Chapman — Brighton house music pioneer, commercial pilot, and radio legend. From pirate radio to Kiss FM, still commanding dance floors worldwide.">
+<title>DJ Sarah Chapman — Brighton House Pioneer | From Bognor to Magaluf</title>
+<meta name="description" content="DJ Sarah Chapman — Brighton house music pioneer and radio legend. From pirate radio to Kiss FM, still commanding dance floors worldwide.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
---bg:#0d0d15;--bg2:#1a1a2e;--bg3:#252545;
---text:#e0e0e0;--text-dim:#9090a0;--text-bright:#ffffff;
---accent:#ff0080;--accent2:#00ff80;--accent3:#ffff00;
---accent4:#8000ff;--accent5:#ff4000;
---grad:linear-gradient(135deg,var(--accent),var(--accent2));
---grad2:linear-gradient(135deg,var(--accent3),var(--accent4));
---radius:12px;--radius-sm:8px;
---font:'Space Grotesk',system-ui,sans-serif;
---mono:'JetBrains Mono',monospace;
---nav-h:64px;
-}
-[data-theme="light"]{
---bg:#f8f8fa;--bg2:#efefef;--bg3:#e0e0e5;
---text:#2a2a3a;--text-dim:#6a6a7a;--text-bright:#0a0a0f;
---accent:#e60073;--accent2:#00cc66;--accent3:#e6e600;
---nav-bg:rgba(255,255,255,.95);
---nav-border:rgba(230,0,115,.3);
-}
-
-/* Stronger light mode navigation styling */
-[data-theme="light"] .logo {
-  color: #0a0a0f !important;
-}
-[data-theme="light"] .nav-links a {
-  color: #6a6a7a !important;
-}
-[data-theme="light"] .nav {
-  background: rgba(255,255,255,.95) !important;
-  border-bottom: 1px solid rgba(230,0,115,.3) !important;
-}
-:root{
---nav-bg:rgba(13,13,21,.9);
---nav-border:rgba(255,0,128,.2);
-}
-
-/* 90s Neon Effects */
-.neon-text{
-  text-shadow:0 0 5px var(--accent),0 0 10px var(--accent),0 0 20px var(--accent);
-  animation:neon-flicker 2s infinite alternate;
-}
-@keyframes neon-flicker{
-  0%,100%{text-shadow:0 0 5px var(--accent),0 0 10px var(--accent),0 0 20px var(--accent);}
-  50%{text-shadow:0 0 2px var(--accent),0 0 5px var(--accent),0 0 10px var(--accent);}
-}
-
-/* Theme toggle */
-.theme-toggle{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.1);
-  background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:all .3s;color:var(--text-dim);font-size:1.1rem;margin-left:12px}
-.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
-
-html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
-body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;overflow-x:hidden}
-
-/* Navigation */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 24px;height:var(--nav-h);
-  background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--nav-border);
-  display:flex;align-items:center;justify-content:space-between;transition:all .3s}
-.nav-left{display:flex;align-items:center}
-.nav-right{display:flex;align-items:center;gap:24px}
-.logo{font-size:1.4rem;font-weight:700;color:var(--text-bright);text-decoration:none}
-.nav-links{display:flex;gap:32px;list-style:none;margin:0;padding:0}
-.nav-links a{color:var(--text-dim);text-decoration:none;font-weight:500;transition:all .2s;font-size:.9rem;white-space:nowrap}
-.nav-links a:hover{color:var(--accent)}
-
-/* Hero Section */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:120px 24px 60px}
-.hero::before{content:'';position:absolute;inset:0;z-index:-1;opacity:.3;
-  background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(255,0,128,.1),transparent 70%),
-  radial-gradient(ellipse 60% 50% at 20% 80%,rgba(0,255,128,.08),transparent 60%),
-  radial-gradient(ellipse 40% 70% at 80% 20%,rgba(255,255,0,.06),transparent 50%)}
-.hero-content{text-align:center;max-width:800px;z-index:1}
-.hero-title{font-size:clamp(2.5rem,8vw,5rem);font-weight:700;margin-bottom:24px;
-  background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-subtitle{font-size:clamp(1.2rem,4vw,1.8rem);color:var(--text-bright);margin-bottom:16px;font-weight:400}
-.hero-tagline{font-size:clamp(1rem,3vw,1.2rem);color:var(--text-dim);margin-bottom:40px}
-.hero-cta{display:inline-flex;align-items:center;gap:12px;padding:16px 32px;
-  background:var(--grad);border:none;border-radius:50px;color:#fff;font-weight:600;
-  text-decoration:none;transition:all .3s;font-size:1rem}
-.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,0,128,.3)}
-
-/* Under Construction Notice */
-.construction-notice {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-.construction-notice span {
-  background: rgba(255,0,128,0.1);
-  border: 2px solid var(--accent);
-  border-radius: 25px;
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  backdrop-filter: blur(10px);
-  animation: constructionPulse 3s ease-in-out infinite;
-}
-
-@keyframes constructionPulse {
-  0%, 100% { opacity: 0.7; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
-}
-
-/* Sections */
-.section{padding:80px 24px}
-.container{max-width:1200px;margin:0 auto}
-.section-label{display:flex;align-items:center;gap:8px;color:var(--accent);font-weight:600;
-  font-size:.85rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
-.section-title{font-size:clamp(2rem,6vw,3rem);font-weight:700;margin-bottom:24px;color:var(--text-bright)}
-.section-subtitle{font-size:1.2rem;color:var(--text-dim);margin-bottom:48px;max-width:600px}
-
-/* Timeline */
-.timeline{position:relative;padding:40px 0}
-.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;
-  background:linear-gradient(to bottom,var(--accent),var(--accent2),var(--accent3));transform:translateX(-50%)}
-.timeline-item{display:flex;margin:40px 0;position:relative}
-.timeline-item:nth-child(even){flex-direction:row-reverse}
-.timeline-content{background:var(--bg2);border-radius:var(--radius);padding:24px;
-  width:45%;border-left:3px solid var(--accent);position:relative}
-.timeline-item:nth-child(even) .timeline-content{border-left:none;border-right:3px solid var(--accent2)}
-.timeline-year{font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:8px}
-.timeline-event{font-size:1.1rem;font-weight:600;color:var(--text-bright);margin-bottom:8px}
-.timeline-desc{color:var(--text-dim)}
-
-/* Gallery Grid */
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin:48px 0}
-.gallery-item{background:var(--bg2);border-radius:var(--radius);overflow:hidden;transition:all .3s;cursor:pointer}
-.gallery-item:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(255,0,128,.2)}
-.gallery-img{width:100%;height:250px;object-fit:cover}
-.gallery-content{padding:20px}
-.gallery-title{font-weight:600;color:var(--text-bright);margin-bottom:8px}
-.gallery-desc{color:var(--text-dim);font-size:.9rem}
-
-/* Mobile Menu */
-.mobile-menu-toggle{display:none;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.1);
-  background:rgba(255,255,255,.06);align-items:center;justify-content:center;
-  cursor:pointer;transition:all .3s;color:var(--text-dim);font-size:1.1rem;margin-left:12px}
-.mobile-menu-toggle:hover{border-color:var(--accent);color:var(--accent)}
-.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);
-  border-top:1px solid rgba(255,0,128,.2);backdrop-filter:blur(20px);padding:16px 0}
-.mobile-menu a{display:block;padding:12px 24px;color:var(--text-dim);text-decoration:none;
-  font-weight:500;transition:all .2s;border-bottom:1px solid rgba(255,255,255,.05)}
-.mobile-menu a:hover{color:var(--accent);background:rgba(255,0,128,.05)}
-.mobile-menu a:last-child{border-bottom:none}
-.mobile-menu.show{display:block}
-
-/* Scroll Down */
-.hero-scroll{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);
-  color:var(--text-dim);font-size:.75rem;display:flex;flex-direction:column;align-items:center;gap:8px;
-  animation:bob 2s ease-in-out infinite;cursor:pointer;transition:color .2s}
-.hero-scroll:hover{color:var(--text-bright)}
-@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
-
-/* Footer */
-footer{padding:60px 24px;text-align:center;border-top:1px solid rgba(255,0,128,.1);color:var(--text-dim)}
-footer .sarah-quote{font-family:var(--mono);margin-bottom:16px;color:var(--accent);font-style:italic}
-footer .mini-socials a:hover i{color:var(--text-bright);transform:translateY(-2px)}
-
-/* Responsive Design for All Devices */
-
-/* Large Desktop (1200px+) */
-/* Default styles already optimized for large screens */
-
-/* Desktop/Laptop (1024px - 1199px) */
-@media (max-width: 1199px) {
-  .container{max-width:1000px}
-  .nav-links{gap:24px}
-  .nav-links a{font-size:0.85rem}
-}
-
-/* Tablet Landscape (900px - 1023px) */
-@media (max-width: 1023px) {
-  .nav-links{gap:20px}
-  .nav-links a{font-size:0.8rem}
-
-}
-
-/* Tablet Portrait (768px - 899px) */
-@media (max-width: 899px) {
-  .nav-links{gap:16px}
-  .nav-links a{font-size:0.75rem}
-  .section{padding:60px 20px}
-
-}
-
-/* Mobile Large (576px - 767px) */
-@media (max-width: 767px) {
-  .nav-links{display:none}
-  .mobile-menu-toggle{display:flex}
-  .nav-right{gap:16px}
-  .nav{padding:0 20px}
-  .hero-scroll{bottom:60px;font-size:0.7rem}
-  .section{padding:50px 16px}
-  .timeline::before{left:20px}
-  .timeline-item,.timeline-item:nth-child(even){flex-direction:column}
-  .timeline-content{width:calc(100% - 60px);margin-left:60px}
-  .timeline-item:nth-child(even) .timeline-content{margin-left:60px;border-left:3px solid var(--accent2);border-right:none}
-  
-
-}
-
-/* Mobile Medium (480px - 575px) */
-@media (max-width: 575px) {
-  .nav{padding:0 16px}
-  .logo{font-size:1.1rem}
-  .section{padding:40px 16px}
-  .hero{padding:100px 16px 40px}
-
-}
-
-/* Mobile Small (320px - 479px) */
-@media (max-width: 479px) {
-  .nav{padding:0 12px}
-  .logo{font-size:1rem}
-  .section{padding:30px 12px}
-  .hero{padding:90px 12px 30px}
-  
-  /* Construction notice mobile adjustments */
-  .construction-notice{top:15%}
-  .construction-notice span{font-size:0.75rem;padding:6px 12px}
-  
-  /* Ensure readability on very small screens */
-  .hero-title{font-size:clamp(2rem,8vw,3rem)}
-  .hero-subtitle{font-size:clamp(1rem,4vw,1.4rem)}
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body data-theme="dark">
 
 <!-- Navigation -->
 <nav class="nav">
   <div class="nav-left">
-    <a href="#" class="logo">DJ Sarah Chapman</a>
+    <a href="index.html" class="logo">DJ Sarah Chapman</a>
   </div>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#timeline">Timeline</a></li>
-      <li><a href="#residencies">Residencies</a></li>
-      <li><a href="#radio">Radio</a></li>
-      <li><a href="#discography">Discography</a></li>
-      <li><a href="#flyers">Flyers</a></li>
-      <li><a href="#photos">Photos</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="press.html">Press & Testimonials</a></li>
+      <li><a href="flyers.html">Flyer Archive</a></li>
     </ul>
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
       <i class="fas fa-sun" id="themeIcon"></i>
@@ -270,47 +31,53 @@ footer .mini-socials a:hover i{color:var(--text-bright);transform:translateY(-2p
     </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about">About</a>
-    <a href="#timeline">Timeline</a>
-    <a href="#residencies">Residencies</a>
-    <a href="#radio">Radio</a>
-    <a href="#discography">Discography</a>
-    <a href="#flyers">Flyers</a>
-    <a href="#photos">Photos</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="press.html">Press & Testimonials</a>
+    <a href="flyers.html">Flyer Archive</a>
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero">
-  <!-- Under Construction Notice -->
-  <div class="construction-notice">
-    <span>Site Under Construction</span>
-  </div>
-  
   <div class="hero-content">
     <h1 class="hero-title">Sarah Chapman</h1>
     <h2 class="hero-subtitle">Brighton House Pioneer</h2>
-    <p class="hero-tagline">From Bognor to Magaluf • Pioneer, pilot, and still commanding dance floors worldwide</p>
-    <a href="#timeline" class="hero-cta">
-      <i class="fas fa-music"></i>
-House Music All Night Long
-    </a>
+    <p class="hero-tagline">From Bognor to Magaluf • Pioneer DJ still commanding dance floors worldwide</p>
+    <div style="margin-top:24px">
+      <button onclick="toggleMusicPlayer()" class="btn" id="houseMusicBtn">
+        🎵 House Music All Night Long
+      </button>
+    </div>
+    
+    <!-- Music Player -->
+    <div id="musicPlayer" class="hidden" style="margin-top:32px;max-width:400px;margin-left:auto;margin-right:auto">
+      <div class="card" style="padding:24px;text-align:center">
+        <div style="color:var(--text-bright);font-weight:600;margin-bottom:12px;font-size:1.1rem">
+          🎵 Club Classics Mix Tape Vol.1 - Side 1
+        </div>
+        <div style="color:var(--text-dim);font-size:0.9rem;margin-bottom:20px">
+          Sarah Chapman's legendary Brighton house music mix
+        </div>
+        <button onclick="window.open('https://www.mixcloud.com/DJSarahChapman/sarah-chapman-club-classics-mix-tape-vol-1-side-1/', '_blank')" class="btn">
+          ▶️ Play on Mixcloud
+        </button>
+      </div>
+    </div>
   </div>
   <div class="hero-scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-    scroll on down
+    scroll down
     <i class="fas fa-chevron-down"></i>
   </div>
 </section>
 
-<!-- About Section -->
+<!-- About -->
 <section class="section" id="about">
   <div class="container">
     <div class="section-label"><i class="fas fa-user"></i> About</div>
     <h2 class="section-title">Pioneering the Scene</h2>
-    <p class="section-subtitle">Sarah Chapman broke barriers as one of the first female DJs in the UK house music scene during the 1990s. From Brighton's underground to international stages, from pirate radio to Kiss FM, she's built an unmatched pedigree while continuing to DJ worldwide.</p>
+    <p class="section-subtitle">One of the first female DJs in the UK house music scene during the 1990s. From Brighton's underground to international stages, from pirate radio to Kiss FM—an unmatched pedigree.</p>
     
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px">
+    <div class="two-col">
       <div>
         <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">Dance Floor Pioneer</h3>
         <p style="color:var(--text-dim);line-height:1.7">
@@ -318,96 +85,51 @@ House Music All Night Long
         </p>
       </div>
       <div>
-        <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">Dual Expertise</h3>
+        <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">Ongoing Legacy</h3>
         <p style="color:var(--text-dim);line-height:1.7">
-          Commercial airline pilot by day, DJ by passion. Sarah proves you can master multiple worlds—commanding both aircraft and dance floors with the same precision, skill, and commanding presence.
+          From the 90s golden era to modern festival stages, Sarah continues to command dance floors with the same precision, skill, and commanding presence that made her a pioneer of the Brighton house scene.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Timeline Section -->
-<section class="section" id="timeline">
+<!-- Sound -->
+<section class="section" id="sound" style="background:var(--bg2)">
   <div class="container">
-    <div class="section-label"><i class="fas fa-clock"></i> Timeline</div>
-    <h2 class="section-title">The Journey</h2>
-    <p class="section-subtitle">Key moments in Sarah's incredible career, from her first gig to taking to the skies.</p>
-    
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">Early 1990s</div>
-          <div class="timeline-event">The Beginning</div>
-          <p class="timeline-desc">Sarah enters the Brighton house music scene, quickly establishing herself as a force to be reckoned with.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">1996</div>
-          <div class="timeline-event">BBC Recognition</div>
-          <p class="timeline-desc">Music featured on BBC TV New Year Sports Roundup. Becomes Pete Tong's regular contact for BBC Radio 1 weekend scene reports—the ultimate validation in UK dance music.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">Mid-Late 1990s</div>
-          <div class="timeline-event">Legendary Residencies</div>
-          <p class="timeline-desc">Commanding dance floors across the South Coast with iconic residencies: Zap Club & Escape Club (Brighton), Popular in Portsmouth, Bangin' in Bognor, Sizzlin' at Sterns, Blisterin' at BCM, Doin' Alright on the Isle of Wight. Face Magazine cover feature cements status as scene icon.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">Late 1990s</div>
-          <div class="timeline-event">Legacy Established</div>
-          <p class="timeline-desc">Having cemented her place in dance music history, Sarah begins her transition toward new horizons.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">2000s+</div>
-          <div class="timeline-event">Dual Mastery</div>
-          <p class="timeline-desc">Qualifies as a commercial airline pilot while maintaining active DJ career. Radio work expands from pirate stations to major commercial broadcasters including Kiss FM.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">Today</div>
-          <div class="timeline-event">Continuing Excellence</div>
-          <p class="timeline-desc">Still commanding dance floors from Bognor to Magaluf and beyond, proving that true pioneers never stop evolving. Pedigree built, passion maintained.</p>
-        </div>
-      </div>
+    <div class="section-label"><i class="fas fa-music"></i> Sound</div>
+    <h2 class="section-title">The Sarah Chapman Sound</h2>
+    <div class="callout-box" style="max-width:800px;margin:0 auto">
+      <p style="color:var(--text-dim);font-size:1.15rem;line-height:1.8;margin-bottom:20px">
+        Soulful, high-energy sets full of the joy that defined early house music. Known for her crate-digging flair and warm mixing style, her sets were packed with funky basslines, soulful vocals, and pure house flavour.
+      </p>
+      <p style="color:var(--accent2);font-weight:600">Uplifting House • American Garage • 90s Classics</p>
     </div>
   </div>
 </section>
 
-<!-- Residencies Section -->
+<!-- Residencies -->
 <section class="section" id="residencies">
   <div class="container">
     <div class="section-label"><i class="fas fa-home"></i> Residencies</div>
     <h2 class="section-title">Commanding the South Coast</h2>
     <p class="section-subtitle">Sarah's legendary club residencies spanned the entire South Coast, each with its own vibe and dedicated following.</p>
     
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:40px">
-      
-      <div class="gallery-item" style="background:var(--bg2);padding:24px;min-height:auto">
+    <div class="gallery">
+      <div class="card" style="min-height:auto">
         <div style="display:flex;align-items:center;margin-bottom:16px">
           <i class="fas fa-music" style="font-size:1.5rem;color:var(--accent);margin-right:12px"></i>
           <h3 style="color:var(--text-bright);margin:0;font-size:1.2rem">Brighton</h3>
         </div>
         <div style="margin-bottom:12px">
           <span style="background:rgba(123,47,255,0.2);padding:4px 8px;border-radius:4px;color:var(--accent);font-size:0.85rem;font-weight:600;margin-right:8px">Zap Club</span>
-          <span style="background:rgba(123,47,255,0.2);padding:4px 8px;border-radius:4px;color:var(--accent);font-size:0.85rem;font-weight:600">Escape Club</span>
+          <span style="background:rgba(123,47,255,0.2);padding:4px 8px;border-radius:4px;color:var(--accent);font-size:0.85rem;font-weight:600;margin-right:8px">Escape Club</span>
+          <span style="background:rgba(123,47,255,0.2);padding:4px 8px;border-radius:4px;color:var(--accent);font-size:0.85rem;font-weight:600">Shark Bar</span>
         </div>
-        <p style="color:var(--text-dim);line-height:1.6;margin:0">Home base venues in the heart of Brighton's legendary house music scene</p>
+        <p style="color:var(--text-dim);line-height:1.6;margin:0">Home base venues in the heart of Brighton's legendary house music scene. Thursday nights at Shark Bar were fabulous.</p>
       </div>
       
-      <div class="gallery-item" style="background:var(--bg2);padding:24px;min-height:auto">
+      <div class="card" style="min-height:auto">
         <div style="display:flex;align-items:center;margin-bottom:16px">
           <i class="fas fa-fire" style="font-size:1.5rem;color:var(--accent2);margin-right:12px"></i>
           <h3 style="color:var(--text-bright);margin:0;font-size:1.2rem">Portsmouth</h3>
@@ -418,7 +140,7 @@ House Music All Night Long
         <p style="color:var(--text-dim);line-height:1.6;margin:0">Established following in the naval city's vibrant club scene</p>
       </div>
       
-      <div class="gallery-item" style="background:var(--bg2);padding:24px;min-height:auto">
+      <div class="card" style="min-height:auto">
         <div style="display:flex;align-items:center;margin-bottom:16px">
           <i class="fas fa-bolt" style="font-size:1.5rem;color:var(--accent3);margin-right:12px"></i>
           <h3 style="color:var(--text-bright);margin:0;font-size:1.2rem">Bognor Regis</h3>
@@ -429,7 +151,7 @@ House Music All Night Long
         <p style="color:var(--text-dim);line-height:1.6;margin:0">High-energy sets at the seaside town's premier dance destination</p>
       </div>
       
-      <div class="gallery-item" style="background:var(--bg2);padding:24px;min-height:auto">
+      <div class="card" style="min-height:auto">
         <div style="display:flex;align-items:center;margin-bottom:16px">
           <i class="fas fa-star" style="font-size:1.5rem;color:var(--accent);margin-right:12px"></i>
           <h3 style="color:var(--text-bright);margin:0;font-size:1.2rem">Sterns</h3>
@@ -440,7 +162,7 @@ House Music All Night Long
         <p style="color:var(--text-dim);line-height:1.6;margin:0">Red-hot residency showcasing cutting-edge house music</p>
       </div>
       
-      <div class="gallery-item" style="background:var(--bg2);padding:24px;min-height:auto">
+      <div class="card" style="min-height:auto">
         <div style="display:flex;align-items:center;margin-bottom:16px">
           <i class="fas fa-globe-europe" style="font-size:1.5rem;color:var(--accent2);margin-right:12px"></i>
           <h3 style="color:var(--text-bright);margin:0;font-size:1.2rem">BCM</h3>
@@ -451,7 +173,7 @@ House Music All Night Long
         <p style="color:var(--text-dim);line-height:1.6;margin:0">Scorching sets at one of the scene's most respected venues</p>
       </div>
       
-      <div class="gallery-item" style="background:var(--bg2);padding:24px;min-height:auto">
+      <div class="card" style="min-height:auto">
         <div style="display:flex;align-items:center;margin-bottom:16px">
           <i class="fas fa-island-tropical" style="font-size:1.5rem;color:var(--accent3);margin-right:12px"></i>
           <h3 style="color:var(--text-bright);margin:0;font-size:1.2rem">Isle of Wight</h3>
@@ -461,212 +183,161 @@ House Music All Night Long
         </div>
         <p style="color:var(--text-dim);line-height:1.6;margin:0">Cross-water residency bringing mainland energy to the island</p>
       </div>
-      
     </div>
     
-    <div style="text-align:center;margin-top:48px">
-      <div style="background:var(--bg2);border-radius:var(--radius);padding:32px;border-left:4px solid var(--accent)">
-        <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">South Coast Circuit</h3>
-        <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
-          From Brighton's underground to Portsmouth's naval energy, from Bognor's seaside vibes to the Isle of Wight's island atmosphere—Sarah commanded the entire South Coast dance circuit with distinctive residencies at each location.
-        </p>
-        <p style="color:var(--accent2);font-weight:600;font-size:0.9rem">"From Bognor to Magaluf" started right here</p>
-      </div>
+    <div class="callout-box" style="margin-top:48px">
+      <p style="color:var(--accent2);font-weight:600;font-size:1.1rem">"From Bognor to Magaluf" started right here</p>
     </div>
   </div>
 </section>
 
-<!-- Radio Section -->
-<section class="section" id="radio">
+<!-- Radio -->
+<section class="section" id="radio" style="background:var(--bg2)">
   <div class="container">
     <div class="section-label"><i class="fas fa-radio"></i> Radio</div>
     <h2 class="section-title">From Pirate to Prime Time</h2>
-    <p class="section-subtitle">Sarah's radio journey spans from underground pirate stations to major commercial broadcasters, building a loyal following across the airwaves.</p>
+    <p class="section-subtitle">Sarah's radio journey spans from underground pirate stations to major commercial broadcasters.</p>
     
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px">
-      <div>
+    <div class="two-col">
+      <div class="card">
         <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.3rem">
           <i class="fas fa-broadcast-tower" style="color:var(--accent);margin-right:12px"></i>
           The Underground Years
         </h3>
-        <div style="background:var(--bg2);border-radius:var(--radius);padding:24px;border-left:3px solid var(--accent)">
-          <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
-            Started on pirate radio, bringing underground house music to listeners who couldn't find it anywhere else. Raw, authentic, and fearless broadcasting.
-          </p>
-          <p style="color:var(--accent2);font-weight:600">Friends FM • Early Pirate Stations</p>
-        </div>
+        <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
+          Started on pirate radio, bringing underground house music to listeners who couldn't find it anywhere else. Raw, authentic, and fearless broadcasting.
+        </p>
+        <p style="color:var(--accent2);font-weight:600">Friends FM • Radioactive • Surf FM</p>
       </div>
       
-      <div>
+      <div class="card" style="border-left-color:var(--accent2)">
         <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.3rem">
           <i class="fas fa-microphone" style="color:var(--accent2);margin-right:12px"></i>
           Commercial Success
         </h3>
-        <div style="background:var(--bg2);border-radius:var(--radius);padding:24px;border-left:3px solid var(--accent2)">
-          <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
-            Graduated to major commercial stations, bringing underground credibility to mainstream audiences. Regular contact for <strong style="color:var(--text-bright)">Pete Tong's BBC Radio 1 show</strong>—when the legendary DJ needed weekend scene updates, Sarah was who he called.
-          </p>
-          <p style="color:var(--accent3);font-weight:600">BBC Radio 1 • Surf 107.2 • Juice 107.2 • Kiss FM</p>
-        </div>
+        <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
+          Graduated to major commercial stations. <strong style="color:var(--text-bright)">Regular contact for Pete Tong's BBC Radio 1 show</strong>—when the legendary DJ needed weekend scene updates, Sarah was who he called.
+        </p>
+        <p style="color:var(--accent3);font-weight:600">BBC Radio 1 • Kiss FM • Surf 107.2 • Juice 107.2</p>
       </div>
     </div>
     
-    <div style="text-align:center;margin-top:48px">
-      <div style="background:var(--bg2);border-radius:var(--radius);padding:32px;border-left:4px solid var(--accent3)">
-        <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.4rem">
-          <i class="fab fa-bbc" style="color:var(--accent3);margin-right:8px"></i>
-          BBC Recognition
-        </h3>
-        <p style="color:var(--text-dim);line-height:1.7;font-size:1.1rem;margin-bottom:16px">
-          <strong style="color:var(--text-bright)">Music featured on BBC TV</strong> New Year Sports Roundup (1996), and <strong style="color:var(--text-bright)">Pete Tong's trusted contact</strong> for BBC Radio 1 weekend scene reports. When the nation's most influential dance music DJ needed to know what was happening, he called Sarah.
-        </p>
-        <p style="color:var(--accent2);font-weight:600;font-size:0.9rem">BBC Television • BBC Radio 1 • Pete Tong Show</p>
-      </div>
-    </div>
-    
-    <div style="text-align:center;margin-top:32px">
-      <div style="background:rgba(255,0,128,0.05);border-radius:var(--radius);padding:24px;border:1px solid rgba(255,0,128,0.2)">
-        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">"From Bognor to Magaluf"</h3>
-        <p style="color:var(--text-dim);line-height:1.7">
-          Sarah's reach spans from South Coast local stations to international destinations, 
-          building a following that follows her wherever the signal reaches.
-        </p>
-      </div>
+    <div class="callout-box" style="margin-top:48px">
+      <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.4rem">
+        <i class="fab fa-bbc" style="color:var(--accent3);margin-right:8px"></i>
+        BBC Recognition
+      </h3>
+      <p style="color:var(--text-dim);line-height:1.7;font-size:1.1rem;margin-bottom:16px">
+        <strong style="color:var(--text-bright)">Music featured on BBC TV</strong> New Year Sports Roundup (1996), and <strong style="color:var(--text-bright)">Pete Tong's trusted contact</strong> for BBC Radio 1 weekend scene reports. When the nation's most influential dance music DJ needed to know what was happening, he called Sarah.
+      </p>
+      <p style="color:var(--accent2);font-weight:600;font-size:0.9rem">BBC Television • BBC Radio 1 • Pete Tong Show</p>
     </div>
   </div>
 </section>
 
-<!-- Discography Section -->
-<section class="section" id="discography">
+<!-- DJ Mixes -->
+<section class="section" id="mixes">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-headphones"></i> DJ Mixes</div>
+    <h2 class="section-title">Listen Now</h2>
+    <p class="section-subtitle">Classic house mixes and recent sets spanning decades of dance floor excellence</p>
+    
+    <div class="two-col">
+      <div class="card" style="text-align:center">
+        <div style="font-size:3rem;color:var(--accent);margin-bottom:16px">
+          <i class="fab fa-mixcloud"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.3rem">Mixcloud</h3>
+        <p style="color:var(--text-dim);line-height:1.7;margin-bottom:20px">
+          Full DJ sets and classic mixes from the 90s to today
+        </p>
+        <a href="https://www.mixcloud.com/DJSarahChapman/" target="_blank" rel="noopener" class="btn">
+          <i class="fab fa-mixcloud"></i> Listen on Mixcloud
+        </a>
+      </div>
+      
+      <div class="card" style="text-align:center;border-left-color:var(--accent2)">
+        <div style="font-size:3rem;color:var(--accent2);margin-bottom:16px">
+          <i class="fab fa-soundcloud"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.3rem">SoundCloud</h3>
+        <p style="color:var(--text-dim);line-height:1.7;margin-bottom:20px">
+          Additional sets, edits, and productions
+        </p>
+        <a href="#" target="_blank" rel="noopener" class="btn-secondary">
+          <i class="fab fa-soundcloud"></i> SoundCloud Profile
+        </a>
+      </div>
+    </div>
+    
+    <!-- Featured Mix -->
+    <div class="callout-box" style="margin-top:48px;max-width:800px;margin-left:auto;margin-right:auto">
+      <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">
+        <i class="fas fa-star" style="color:var(--accent3);margin-right:8px"></i>
+        Featured Mix
+      </h3>
+      <h4 style="color:var(--accent2);margin-bottom:12px;font-size:1.1rem">Club Classics Mix Tape Vol.1 - Side 1</h4>
+      <p style="color:var(--text-dim);line-height:1.7;margin-bottom:20px">
+        Sarah's legendary Brighton house music mix showcasing the soulful, high-energy sound that defined the era.
+      </p>
+      <a href="https://www.mixcloud.com/DJSarahChapman/sarah-chapman-club-classics-mix-tape-vol-1-side-1/" target="_blank" rel="noopener" class="btn">
+        <i class="fas fa-play"></i> Play Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Discography -->
+<section class="section" id="discography" style="background:var(--bg2)">
   <div class="container">
     <div class="section-label"><i class="fas fa-compact-disc"></i> Discography</div>
-    <h2 class="section-title">Releases & Compilations</h2>
-    <p class="section-subtitle">A curated collection of Sarah's productions, mixes, and featured appearances spanning her career.</p>
+    <h2 class="section-title">Releases & Productions</h2>
+    <p class="section-subtitle">Original productions, compilations, and featured appearances</p>
     
-    <div class="gallery" id="discographyGallery">
-      <!-- Discography items will be added here -->
-      <div class="gallery-item" style="background:var(--bg3);display:flex;align-items:center;justify-content:center;min-height:300px">
-        <div style="text-align:center;color:var(--text-dim)">
-          <i class="fas fa-plus-circle" style="font-size:3rem;margin-bottom:16px;color:var(--accent)"></i>
-          <p>Discography collection coming soon</p>
-          <p style="font-size:0.85rem;margin-top:8px">Productions • Compilations • Featured Mixes</p>
+    <div class="gallery">
+      <div class="card" style="text-align:center;min-height:auto">
+        <div style="font-size:2.5rem;color:var(--accent);margin-bottom:16px">
+          <i class="fab fa-spotify"></i>
         </div>
-      </div>
-      
-      <div class="gallery-item" style="background:var(--bg2);padding:24px">
-        <div style="text-align:center">
-          <i class="fab fa-spotify" style="font-size:2.5rem;color:#1DB954;margin-bottom:16px"></i>
-          <h3 style="color:var(--text-bright);margin-bottom:8px">Discogs Profile</h3>
-          <p style="color:var(--text-dim);margin-bottom:16px">Complete discography and collecting history</p>
-          <a href="#" style="display:inline-block;padding:8px 16px;background:var(--accent);color:white;text-decoration:none;border-radius:20px;font-size:0.9rem">
-            View on Discogs
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Flyers Section -->
-<section class="section" id="flyers">
-  <div class="container">
-    <div class="section-label"><i class="fas fa-images"></i> Archive</div>
-    <h2 class="section-title">Original Flyers</h2>
-    <p class="section-subtitle">Authentic promotional materials from the golden age of Brighton house music.</p>
-    
-    <div class="gallery" id="flyerGallery">
-      <!-- Flyers will be added here -->
-      <div class="gallery-item" style="background:var(--bg3);display:flex;align-items:center;justify-content:center;min-height:300px">
-        <div style="text-align:center;color:var(--text-dim)">
-          <i class="fas fa-plus-circle" style="font-size:3rem;margin-bottom:16px;color:var(--accent)"></i>
-          <p>Flyer archive coming soon</p>
-          <p style="font-size:0.85rem;margin-top:8px">Original promotional materials • Venue history • Lineup collaborations</p>
-        </div>
-      </div>
-    </div>
-    
-    <div style="margin-top:48px;text-align:center">
-      <div style="background:var(--bg2);border-radius:var(--radius);padding:32px;border-left:4px solid var(--accent2)">
-        <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">
-          <i class="fas fa-handshake" style="color:var(--accent2);margin-right:8px"></i>
-          Shared Stages & Lineups
-        </h3>
-        <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
-          The flyer archive will reveal the full scope of Sarah's collaborations—sharing stages with legendary DJs and emerging artists throughout her career. From underground raves to commercial club nights, her connections span the entire spectrum of dance music.
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">Spotify</h3>
+        <p style="color:var(--text-dim);line-height:1.6;margin-bottom:16px;font-size:0.9rem">
+          Stream tracks and playlists
         </p>
-        <p style="color:var(--accent3);font-weight:600;font-size:0.9rem">Collaboration network to be populated from flyer archive</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Photos Section -->
-<section class="section" id="photos">
-  <div class="container">
-    <div class="section-label"><i class="fas fa-camera"></i> Photos</div>
-    <h2 class="section-title">Behind the Decks</h2>
-    <p class="section-subtitle">Rare photos from Sarah's legendary performances and the Brighton scene.</p>
-    
-    <div class="gallery" id="photoGallery">
-      <!-- Photos will be added here -->
-      <div class="gallery-item" style="background:var(--bg3);display:flex;align-items:center;justify-content:center;min-height:300px">
-        <div style="text-align:center;color:var(--text-dim)">
-          <i class="fas fa-plus-circle" style="font-size:3rem;margin-bottom:16px;color:var(--accent2)"></i>
-          <p>Photo archive coming soon</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Current Impact Section -->
-<section class="section" id="impact">
-  <div class="container">
-    <div class="section-label"><i class="fas fa-star"></i> Ongoing Impact</div>
-    <h2 class="section-title">Still Commanding Dance Floors</h2>
-    <p class="section-subtitle">Sarah's influence continues to shape the scene while she maintains an active presence behind the decks.</p>
-    
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px">
-      <div>
-        <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.3rem">
-          <i class="fas fa-magazine" style="color:var(--accent);margin-right:12px"></i>
-          Media Recognition
-        </h3>
-        <div style="background:var(--bg2);border-radius:var(--radius);padding:24px;border-left:3px solid var(--accent)">
-          <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
-            Featured on the cover of <strong style="color:var(--text-bright)">Face Magazine</strong>, music appeared on <strong style="color:var(--text-bright)">BBC TV New Year Sports Roundup (1996)</strong>, and regular contact for <strong style="color:var(--text-bright)">Pete Tong's BBC Radio 1 show</strong> for weekend scene updates.
-          </p>
-          <p style="color:var(--accent);font-weight:600;font-size:0.9rem">Face Magazine • BBC TV • Radio 1</p>
-        </div>
+        <a href="#" target="_blank" rel="noopener" class="btn-secondary">
+          <i class="fab fa-spotify"></i> Spotify Profile
+        </a>
       </div>
       
-      <div>
-        <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.3rem">
-          <i class="fas fa-users" style="color:var(--accent2);margin-right:12px"></i>
-          Legendary Lineups
-        </h3>
-        <div style="background:var(--bg2);border-radius:var(--radius);padding:24px;border-left:3px solid var(--accent2)">
-          <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
-            Shared lineups with countless pioneering DJs throughout her career. Her flyer archive tells the story of connections and collaborations across the scene.
-          </p>
-          <p style="color:var(--accent3);font-weight:600;font-size:0.9rem">Collaborations Archive Coming Soon</p>
+      <div class="card" style="text-align:center;min-height:auto">
+        <div style="font-size:2.5rem;color:var(--accent2);margin-bottom:16px">
+          <i class="fab fa-apple"></i>
         </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">Apple Music</h3>
+        <p style="color:var(--text-dim);line-height:1.6;margin-bottom:16px;font-size:0.9rem">
+          Releases on Apple Music
+        </p>
+        <a href="#" target="_blank" rel="noopener" class="btn-secondary">
+          <i class="fab fa-apple"></i> Apple Music
+        </a>
       </div>
-    </div>
-    
-    <div style="text-align:center;margin-top:48px">
-      <div style="background:var(--bg2);border-radius:var(--radius);padding:40px;max-width:700px;margin:0 auto;border-left:4px solid var(--accent3)">
-        <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.4rem">Recent Recognition</h3>
-        <blockquote style="color:var(--text-dim);line-height:1.7;font-size:1.1rem;font-style:italic;margin-bottom:16px">
-          "[Recent pedigree quote from social media to be added - showcasing current respect and ongoing influence in the scene]"
-        </blockquote>
-        <p style="color:var(--accent2);font-weight:600;font-size:0.9rem">— Recent promotional quote, 2024/2025</p>
+      
+      <div class="card" style="text-align:center;min-height:auto">
+        <div style="font-size:2.5rem;color:var(--accent3);margin-bottom:16px">
+          <i class="fas fa-record-vinyl"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">Discogs</h3>
+        <p style="color:var(--text-dim);line-height:1.6;margin-bottom:16px;font-size:0.9rem">
+          Complete discography & vinyl collection
+        </p>
+        <a href="#" target="_blank" rel="noopener" class="btn-secondary">
+          <i class="fas fa-external-link-alt"></i> Discogs Profile
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section class="section" id="contact">
   <div class="container">
     <div class="section-label"><i class="fas fa-envelope"></i> Contact</div>
@@ -674,10 +345,10 @@ House Music All Night Long
     <p class="section-subtitle">Whether you're looking to book Sarah for your event, discuss a remix, or just want to connect—we'd love to hear from you.</p>
     
     <div style="max-width:600px;margin:0 auto">
-      <form id="contactForm" style="background:var(--bg2);border-radius:var(--radius);padding:40px;border-left:4px solid var(--accent)">
-        <div style="margin-bottom:24px">
-          <label for="contactType" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Contact Type</label>
-          <select id="contactType" name="contactType" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font)">
+      <form id="contactForm" class="card">
+        <div class="form-group">
+          <label for="contactType" class="form-label">Contact Type</label>
+          <select id="contactType" name="contactType" required class="form-select">
             <option value="">Select inquiry type...</option>
             <option value="contact">General Contact</option>
             <option value="booking">DJ Booking</option>
@@ -688,32 +359,32 @@ House Music All Night Long
         
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px">
           <div>
-            <label for="name" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Name</label>
-            <input type="text" id="name" name="name" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font)">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" required class="form-input">
           </div>
           <div>
-            <label for="email" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Email</label>
-            <input type="email" id="email" name="email" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font)">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" required class="form-input">
           </div>
         </div>
         
-        <div style="margin-bottom:24px">
-          <label for="subject" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Subject</label>
-          <input type="text" id="subject" name="subject" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font)">
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" name="subject" required class="form-input">
         </div>
         
-        <div style="margin-bottom:32px">
-          <label for="message" style="display:block;color:var(--text-bright);font-weight:600;margin-bottom:8px">Message</label>
-          <textarea id="message" name="message" rows="6" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--bg3);color:var(--text);font-family:var(--font);resize:vertical"></textarea>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" required class="form-textarea"></textarea>
         </div>
         
-        <button type="submit" style="width:100%;padding:16px;background:var(--grad);border:none;border-radius:50px;color:#fff;font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s;font-family:var(--font)">
-          <i class="fas fa-paper-plane" style="margin-right:8px"></i>
+        <button type="submit" class="btn" style="width:100%">
+          <i class="fas fa-paper-plane"></i>
           Send Message
         </button>
       </form>
       
-      <div style="text-align:center;margin-top:32px;padding:24px;background:rgba(255,0,128,0.05);border-radius:var(--radius);border:1px solid rgba(255,0,128,0.2)">
+      <div class="callout-box" style="margin-top:32px">
         <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">
           <i class="fas fa-info-circle" style="color:var(--accent);margin-right:8px"></i>
           Professional Inquiries
@@ -735,175 +406,37 @@ House Music All Night Long
   <p class="sarah-quote">"From the dance floor to 30,000 feet—always reaching new heights"</p>
   <p>© 2025 DJ Sarah Chapman. Celebrating pedigree, passion, and ongoing excellence.</p>
   
-  <!-- Mini Social Links -->
-  <div class="mini-socials" style="margin:20px 0;display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+  <div class="mini-socials">
     <a href="#" target="_blank" rel="noopener" title="Instagram">
-      <i class="fab fa-instagram" style="font-size:1.2rem;color:var(--text-dim);transition:all 0.2s"></i>
+      <i class="fab fa-instagram"></i>
     </a>
     <a href="#" target="_blank" rel="noopener" title="Facebook">
-      <i class="fab fa-facebook" style="font-size:1.2rem;color:var(--text-dim);transition:all 0.2s"></i>
+      <i class="fab fa-facebook"></i>
     </a>
     <a href="#" target="_blank" rel="noopener" title="X / Twitter">
-      <i class="fab fa-x-twitter" style="font-size:1.2rem;color:var(--text-dim);transition:all 0.2s"></i>
+      <i class="fab fa-x-twitter"></i>
     </a>
     <a href="#" target="_blank" rel="noopener" title="TikTok">
-      <i class="fab fa-tiktok" style="font-size:1.2rem;color:var(--text-dim);transition:all 0.2s"></i>
+      <i class="fab fa-tiktok"></i>
     </a>
     <a href="#" target="_blank" rel="noopener" title="YouTube">
-      <i class="fab fa-youtube" style="font-size:1.2rem;color:var(--text-dim);transition:all 0.2s"></i>
+      <i class="fab fa-youtube"></i>
     </a>
     <a href="#" target="_blank" rel="noopener" title="SoundCloud">
-      <i class="fab fa-soundcloud" style="font-size:1.2rem;color:var(--text-dim);transition:all 0.2s"></i>
+      <i class="fab fa-soundcloud"></i>
     </a>
-    <a href="#" target="_blank" rel="noopener" title="Mixcloud">
-      <i class="fab fa-mixcloud" style="font-size:1.2rem;color:var(--text-dim);transition:all 0.2s"></i>
+    <a href="https://www.mixcloud.com/DJSarahChapman/" target="_blank" rel="noopener" title="Mixcloud">
+      <i class="fab fa-mixcloud"></i>
     </a>
     <a href="#" target="_blank" rel="noopener" title="Spotify">
-      <i class="fab fa-spotify" style="font-size:1.2rem;color:var(--text-dim);transition:all 0.2s"></i>
+      <i class="fab fa-spotify"></i>
     </a>
   </div>
   
-  <p style="margin-top:12px;font-size:0.85rem">Part of the <a href="https://cam61230.github.io/wavegrippa-site/" style="color:var(--accent3)">wavegrippa Heroes of House</a> series</p>
+  <p style="margin-top:12px;font-size:0.85rem">Part of the <a href="https://kevin-openclaw.github.io/wavegrippa/" style="color:var(--accent3)">wavegrippa Heroes of House</a> series</p>
 </footer>
 
-<script>
-// Theme toggle
-let currentTheme = 'dark';
-const themeIcon = document.getElementById('themeIcon');
-
-function setTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-  localStorage.setItem('sarah-theme', theme);
-}
-
-function toggleTheme() {
-  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  setTheme(currentTheme);
-}
-
-// Mobile menu toggle
-function toggleMobileMenu() {
-  const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('show');
-}
-
-// Close mobile menu when clicking a link
-document.addEventListener('DOMContentLoaded', function() {
-  const mobileLinks = document.querySelectorAll('.mobile-menu a');
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      document.getElementById('mobileMenu').classList.remove('show');
-    });
-  });
-});
-
-// Load saved theme
-const savedTheme = localStorage.getItem('sarah-theme');
-if (savedTheme) {
-  currentTheme = savedTheme;
-  setTheme(currentTheme);
-}
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-// Contact form handling
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const formData = new FormData(this);
-  const data = {
-    contactType: formData.get('contactType'),
-    name: formData.get('name'),
-    email: formData.get('email'),
-    subject: formData.get('subject'),
-    message: formData.get('message')
-  };
-  
-  // Update button state
-  const button = this.querySelector('button[type="submit"]');
-  const originalText = button.innerHTML;
-  button.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:8px"></i>Sending...';
-  button.disabled = true;
-  
-  // Simulate form submission (replace with actual endpoint later)
-  setTimeout(() => {
-    alert(`Thank you ${data.name}! Your ${data.contactType} inquiry has been received. We'll get back to you at ${data.email} soon.`);
-    this.reset();
-    button.innerHTML = originalText;
-    button.disabled = false;
-  }, 2000);
-});
-
-// Gallery functions for content population
-function addFlyer(imageSrc, title, description, year) {
-  const gallery = document.getElementById('flyerGallery');
-  const item = document.createElement('div');
-  item.className = 'gallery-item';
-  item.innerHTML = `
-    <img src="${imageSrc}" alt="${title}" class="gallery-img">
-    <div class="gallery-content">
-      <div class="gallery-title">${title}</div>
-      <div class="gallery-desc">${description} • ${year}</div>
-    </div>
-  `;
-  gallery.appendChild(item);
-}
-
-function addPhoto(imageSrc, title, description) {
-  const gallery = document.getElementById('photoGallery');
-  const item = document.createElement('div');
-  item.className = 'gallery-item';
-  item.innerHTML = `
-    <img src="${imageSrc}" alt="${title}" class="gallery-img">
-    <div class="gallery-content">
-      <div class="gallery-title">${title}</div>
-      <div class="gallery-desc">${description}</div>
-    </div>
-  `;
-  gallery.appendChild(item);
-}
-
-// Function to add collaborating DJs (derived from flyers)
-function addCollaboration(djName, venue, date, eventName) {
-  console.log(`Collaboration: ${djName} with Sarah Chapman at ${venue} - ${eventName} (${date})`);
-  // Future: populate collaboration network display
-}
-
-// Function to add discography items
-function addDiscographyItem(title, type, year, platforms, artwork) {
-  const gallery = document.getElementById('discographyGallery');
-  const item = document.createElement('div');
-  item.className = 'gallery-item';
-  
-  let platformLinks = '';
-  if (platforms && platforms.length > 0) {
-    platformLinks = platforms.map(platform => 
-      `<a href="${platform.url}" target="_blank" rel="noopener" style="color:var(--accent);margin-right:8px;text-decoration:none;font-size:0.9rem">${platform.name}</a>`
-    ).join('');
-  }
-  
-  item.innerHTML = `
-    ${artwork ? `<img src="${artwork}" alt="${title}" class="gallery-img">` : ''}
-    <div class="gallery-content">
-      <div class="gallery-title">${title}</div>
-      <div class="gallery-desc">${type} • ${year}</div>
-      ${platformLinks ? `<div style="margin-top:12px">${platformLinks}</div>` : ''}
-    </div>
-  `;
-  gallery.appendChild(item);
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
-<!-- Rebuild trigger Tue Feb 24 23:17:04 GMT 2026 -->

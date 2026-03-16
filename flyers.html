@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flyer Archive — DJ Sarah Chapman | 90s House Scene History</title>
+<meta name="description" content="Authentic promotional materials from Brighton's legendary house music scene. Original flyers, venue history, and lineup collaborations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="logo">DJ Sarah Chapman</a>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="press.html">Press & Testimonials</a></li>
+      <li><a href="flyers.html">Flyer Archive</a></li>
+    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="themeIcon"></i>
+    </button>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="press.html">Press & Testimonials</a>
+    <a href="flyers.html">Flyer Archive</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" style="min-height:60vh">
+  <div class="hero-content">
+    <h1 class="hero-title">Flyer Archive</h1>
+    <h2 class="hero-subtitle">Authentic Promotional Materials from the Golden Age</h2>
+    <p class="hero-tagline">Original flyers from Brighton's legendary house music scene and beyond</p>
+  </div>
+  <div class="hero-scroll" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">
+    explore the archive
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- Introduction -->
+<section class="section" id="intro">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-file-image"></i> The Archive</div>
+    <h2 class="section-title">A Visual History</h2>
+    <p class="section-subtitle">Each flyer tells a story of packed dance floors, legendary lineups, and the vibrant culture that defined an era.</p>
+    
+    <div class="callout-box" style="max-width:800px;margin:0 auto">
+      <p style="color:var(--text-dim);line-height:1.8;font-size:1.05rem">
+        From underground raves to commercial club nights, from Brighton's Zap Club to Glasgow's Sub Club, Sarah Chapman shared stages with countless pioneering DJs throughout her career. These flyers document collaborations, residencies, and one-off events that shaped the UK house scene.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Flyer Gallery -->
+<section class="section" id="gallery" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-images"></i> Flyer Collection</div>
+    <h2 class="section-title">The Collection</h2>
+    
+    <!-- Placeholder for flyer filtering (future enhancement) -->
+    <div style="margin-bottom:40px;padding:20px;background:var(--bg3);border-radius:var(--radius);text-align:center">
+      <p style="color:var(--text-dim);margin-bottom:12px">
+        <i class="fas fa-filter" style="margin-right:8px"></i>
+        Filter options coming soon: by venue, year, or event type
+      </p>
+    </div>
+    
+    <!-- Gallery container (populated via JavaScript) -->
+    <div id="flyerGallery" class="gallery">
+      <!-- Placeholder card -->
+      <div class="card" style="text-align:center;padding:60px 24px">
+        <div style="font-size:4rem;color:var(--accent);margin-bottom:20px">
+          <i class="fas fa-file-image"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.3rem">Flyer Archive Coming Soon</h3>
+        <p style="color:var(--text-dim);line-height:1.7;max-width:400px;margin:0 auto">
+          We're currently digitizing authentic promotional materials from the 90s house scene. Check back soon for a visual journey through Sarah's legendary career.
+        </p>
+      </div>
+      
+      <!-- Example of how flyers will be added (via JavaScript) -->
+      <!--
+      <div class="gallery-item">
+        <img src="images/flyers/zap-club-1994.jpg" alt="Zap Club 1994" class="gallery-img">
+        <div class="gallery-content">
+          <div class="gallery-title">Zap Club</div>
+          <div class="gallery-desc">Brighton • 1994 • Sarah Chapman headline set</div>
+          <button class="btn-secondary">Download</button>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- Collaboration Network -->
+<section class="section" id="collaborations">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-network-wired"></i> Shared Stages</div>
+    <h2 class="section-title">Collaboration Network</h2>
+    <p class="section-subtitle">The flyer archive reveals the full scope of Sarah's collaborations throughout her career</p>
+    
+    <div class="callout-box" style="max-width:800px;margin:0 auto">
+      <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">
+        <i class="fas fa-users" style="color:var(--accent2);margin-right:12px"></i>
+        Lineup Analysis Coming Soon
+      </h3>
+      <p style="color:var(--text-dim);line-height:1.7">
+        Once the flyer archive is populated, we'll automatically extract and visualize Sarah's collaboration network—showing which DJs she shared stages with most frequently, revealing connections across the UK house scene from underground raves to commercial superclubs.
+      </p>
+    </div>
+    
+    <div class="two-col" style="margin-top:48px">
+      <div class="card">
+        <h4 style="color:var(--text-bright);margin-bottom:12px;font-size:1.1rem">
+          <i class="fas fa-star" style="color:var(--accent);margin-right:8px"></i>
+          Legendary Venues
+        </h4>
+        <p style="color:var(--text-dim);line-height:1.7;font-size:0.95rem">
+          Flyers will document Sarah's residencies and guest sets at Brighton's Zap Club, Escape Club, and Shark Bar; Portsmouth's thriving scene; Glasgow's Sub Club; and venues across the South Coast and beyond.
+        </p>
+      </div>
+      
+      <div class="card" style="border-left-color:var(--accent2)">
+        <h4 style="color:var(--text-bright);margin-bottom:12px;font-size:1.1rem">
+          <i class="fas fa-handshake" style="color:var(--accent2);margin-right:8px"></i>
+          DJ Collaborations
+        </h4>
+        <p style="color:var(--text-dim);line-height:1.7;font-size:0.95rem">
+          From emerging artists to established legends, Sarah's lineup appearances tell the story of connections that shaped the entire spectrum of 90s UK dance music.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Venue Spotlight -->
+<section class="section" id="venues" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-map-marker-alt"></i> Venue Spotlight</div>
+    <h2 class="section-title">Legendary Locations</h2>
+    <p class="section-subtitle">Key venues where Sarah commanded the dance floor throughout her career</p>
+    
+    <div class="gallery">
+      <div class="card" style="text-align:center;min-height:auto">
+        <div style="font-size:2.5rem;color:var(--accent);margin-bottom:16px">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">The Zap Club</h3>
+        <p style="color:var(--accent2);font-weight:600;margin-bottom:8px">Brighton</p>
+        <p style="color:var(--text-dim);line-height:1.6;font-size:0.9rem">
+          Legendary Brighton venue, home to Sarah's early residencies and countless memorable nights
+        </p>
+      </div>
+      
+      <div class="card" style="text-align:center;min-height:auto">
+        <div style="font-size:2.5rem;color:var(--accent2);margin-bottom:16px">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">Escape Club</h3>
+        <p style="color:var(--accent2);font-weight:600;margin-bottom:8px">Brighton</p>
+        <p style="color:var(--text-dim);line-height:1.6;font-size:0.9rem">
+          Thursday night residency, brilliant sets that became the stuff of legend
+        </p>
+      </div>
+      
+      <div class="card" style="text-align:center;min-height:auto">
+        <div style="font-size:2.5rem;color:var(--accent3);margin-bottom:16px">
+          <i class="fas fa-glass-martini"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">Shark Bar</h3>
+        <p style="color:var(--accent2);font-weight:600;margin-bottom:8px">Brighton</p>
+        <p style="color:var(--text-dim);line-height:1.6;font-size:0.9rem">
+          "Fabulous" Thursday nights remembered by regulars decades later
+        </p>
+      </div>
+      
+      <div class="card" style="text-align:center;min-height:auto">
+        <div style="font-size:2.5rem;color:var(--accent);margin-bottom:16px">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">Sub Club</h3>
+        <p style="color:var(--accent2);font-weight:600;margin-bottom:8px">Glasgow</p>
+        <p style="color:var(--text-dim);line-height:1.6;font-size:0.9rem">
+          Scotland's premier house venue, Friday night residency (confirmed in The Independent 1995)
+        </p>
+      </div>
+      
+      <div class="card" style="text-align:center;min-height:auto">
+        <div style="font-size:2.5rem;color:var(--accent2);margin-bottom:16px">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">The Empire</h3>
+        <p style="color:var(--accent2);font-weight:600;margin-bottom:8px">Brighton</p>
+        <p style="color:var(--text-dim);line-height:1.6;font-size:0.9rem">
+          "A big 'Empire' favourite back in the day" — promoter quote, 2024
+        </p>
+      </div>
+      
+      <div class="card" style="text-align:center;min-height:auto">
+        <div style="font-size:2.5rem;color:var(--accent3);margin-bottom:16px">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3 style="color:var(--text-bright);margin-bottom:12px;font-size:1.2rem">Sterns</h3>
+        <p style="color:var(--accent2);font-weight:600;margin-bottom:8px">Various</p>
+        <p style="color:var(--text-dim);line-height:1.6;font-size:0.9rem">
+          "Sizzlin' at Sterns" residency, still booking Sarah for reunion events in 2024
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contribution CTA -->
+<section class="section" id="contribute">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-upload"></i> Contribute</div>
+    <h2 class="section-title">Help Build the Archive</h2>
+    <p class="section-subtitle">Have an original flyer featuring Sarah Chapman? We'd love to add it to the collection!</p>
+    
+    <div class="callout-box" style="max-width:700px;margin:0 auto">
+      <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.3rem">
+        <i class="fas fa-hands-helping" style="color:var(--accent2);margin-right:12px"></i>
+        Share Your Memories
+      </h3>
+      <p style="color:var(--text-dim);line-height:1.7;margin-bottom:24px">
+        If you have original flyers, photos, or memorabilia from Sarah's sets throughout the 90s and beyond, we'd love to hear from you. Help us preserve this important piece of UK house music history!
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="index.html#contact" class="btn">
+          <i class="fas fa-envelope"></i> Get In Touch
+        </a>
+        <a href="mailto:sarah@djsarahchapman.com" class="btn-secondary">
+          <i class="fas fa-at"></i> Email Directly
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p class="sarah-quote">"From the dance floor to 30,000 feet—always reaching new heights"</p>
+  <p>© 2025 DJ Sarah Chapman. Celebrating pedigree, passion, and ongoing excellence.</p>
+  
+  <div class="mini-socials">
+    <a href="#" target="_blank" rel="noopener" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" target="_blank" rel="noopener" title="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="#" target="_blank" rel="noopener" title="X / Twitter">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+    <a href="#" target="_blank" rel="noopener" title="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="#" target="_blank" rel="noopener" title="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="#" target="_blank" rel="noopener" title="SoundCloud">
+      <i class="fab fa-soundcloud"></i>
+    </a>
+    <a href="https://www.mixcloud.com/DJSarahChapman/" target="_blank" rel="noopener" title="Mixcloud">
+      <i class="fab fa-mixcloud"></i>
+    </a>
+    <a href="#" target="_blank" rel="noopener" title="Spotify">
+      <i class="fab fa-spotify"></i>
+    </a>
+  </div>
+  
+  <p style="margin-top:12px;font-size:0.85rem">Part of the <a href="https://kevin-openclaw.github.io/wavegrippa/" style="color:var(--accent3)">wavegrippa Heroes of House</a> series</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- FLYER POPULATION GUIDE WITH SEO-OPTIMIZED DJ LINEUP METADATA
+=====================================================================
+
+IMPORTANT: When adding flyers, ALWAYS include the DJ lineup array.
+This creates SEO-rich connections between Sarah Chapman and the DJs
+she performed with, helping search engines associate her with major
+names like David Morales, Sasha, Paul Oakenfold, etc.
+
+FUNCTION SIGNATURE:
+addFlyer(imageSrc, title, description, year, venue, lineupDJs)
+
+PARAMETERS:
+- imageSrc: path to flyer image (e.g., 'images/flyers/zap-club-1994.jpg')
+- title: event name (e.g., 'Zap Club')
+- description: brief description (e.g., 'House classics night')
+- year: event year (e.g., '1994')
+- venue: venue name (e.g., 'The Zap Club, Brighton')
+- lineupDJs: ARRAY of other DJs on the lineup (CRITICAL FOR SEO)
+
+EXAMPLE WITH DJ LINEUP (RECOMMENDED):
+addFlyer(
+  'images/flyers/zap-club-david-morales-1995.jpg',
+  'Zap Club House Night',
+  'Classic house night with international guests',
+  '1995',
+  'The Zap Club, Brighton',
+  ['David Morales', 'Danny Rampling', 'Jeremy Healy']  // <-- SEO GOLD!
+);
+
+This creates searchable connections:
+- "Sarah Chapman David Morales"
+- "Sarah Chapman Danny Rampling"
+- "Sarah Chapman Zap Club 1995"
+
+EXAMPLE WITHOUT LINEUP (OK but less SEO value):
+addFlyer(
+  'images/flyers/escape-thursday-1995.jpg',
+  'Escape Club Thursday',
+  'Regular Thursday residency',
+  '1995',
+  'Escape Club, Brighton',
+  []  // No lineup data available
+);
+
+SEO BENEFITS:
+1. Schema.org structured data (MusicEvent)
+2. DJ names in meta description
+3. Searchable lineup text
+4. Collaboration network extraction
+5. Google Knowledge Graph associations
+
+USAGE EXAMPLES WHEN POPULATING:
+
+Example 1: Major guest DJ
+addFlyer(
+  'images/flyers/zap-sasha-1996.jpg',
+  'Sasha at The Zap',
+  'Legendary night with Sasha',
+  '1996',
+  'The Zap Club, Brighton',
+  ['Sasha', 'John Digweed']
+);
+
+Example 2: Multiple local DJs
+addFlyer(
+  'images/flyers/escape-residents-1995.jpg',
+  'Escape Club Residents',
+  'Brighton house residents showcase',
+  '1995',
+  'Escape Club, Brighton',
+  ['DJ Mark', 'Paul Smith', 'Tony Andrews']
+);
+
+Example 3: International lineup
+addFlyer(
+  'images/flyers/ministry-of-sound-1997.jpg',
+  'Ministry of Sound Guest Night',
+  'Sarah Chapman guest set',
+  '1997',
+  'Ministry of Sound, London',
+  ['Paul Oakenfold', 'Carl Cox', 'Fatboy Slim']
+);
+
+HOW TO FIND DJ LINEUPS:
+1. Look at the flyer image carefully
+2. Names are usually listed prominently
+3. Include ALL DJs mentioned (order doesn't matter)
+4. Use their professional DJ names as known in the 90s
+5. Include first and last names when known
+
+COLLABORATION NETWORK:
+Once flyers are populated, run: extractDJCollaborations()
+This generates a sorted list of most frequent collaborators
+Perfect for creating a "Shared Stages" visualization!
+
+SEARCH BY DJ:
+searchFlyersByDJ('David Morales')
+Returns all flyers where Sarah played with that DJ
+
+Remember: The lineup data is the KEY to SEO success. Every DJ name
+creates a searchable connection. When someone searches "Sarah Chapman
+David Morales", Google will find this structured data!
+
+Uncomment the examples below and populate with REAL flyer data:
+-->
+<!--
+<script>
+// TEMPLATE - Replace with actual flyer data including DJ lineups!
+
+// Example 1: WITH lineup (preferred)
+addFlyer(
+  'images/flyers/zap-club-1995.jpg',
+  'The Zap Club',
+  'House classics night',
+  '1995',
+  'The Zap Club, Brighton',
+  ['David Morales', 'Danny Rampling']  // <-- Add real DJ names from flyer!
+);
+
+// Example 2: WITHOUT lineup (if genuinely unknown)
+addFlyer(
+  'images/flyers/escape-thursday-1995.jpg',
+  'Escape Club Thursday',
+  'Regular Thursday residency',
+  '1995',
+  'Escape Club, Brighton',
+  []  // No lineup data available
+);
+
+// Add more flyers with DJ lineups as images become available...
+</script>
+-->
+
+</body>
+</html>
