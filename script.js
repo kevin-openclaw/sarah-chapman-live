@@ -95,17 +95,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     
     const formData = new FormData(this);
-    const data = {
-      contactType: formData.get('contactType'),
-      name: formData.get('name'),
-      email: formData.get('email'),
-      subject: formData.get('subject'),
-      message: formData.get('message')
-    };
     
     // Update button state
     const button = this.querySelector('button[type="submit"]');
@@ -113,13 +106,29 @@ if (contactForm) {
     button.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:8px"></i>Sending...';
     button.disabled = true;
     
-    // Simulate form submission (replace with actual endpoint later)
-    setTimeout(() => {
-      alert(`Thank you ${data.name}! Your ${data.contactType} inquiry has been received. We'll get back to you at ${data.email} soon.`);
-      this.reset();
+    try {
+      // Submit to Formspree
+      const response = await fetch('https://formspree.io/f/xlgpzyep', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        const data = Object.fromEntries(formData);
+        alert(`Thank you ${data.name}! Your ${data.contactType} inquiry has been received. We'll get back to you at ${data.email} soon.`);
+        this.reset();
+      } else {
+        alert('Oops! There was a problem submitting your form. Please try again or email sarah@djsarahchapman.com directly.');
+      }
+    } catch (error) {
+      alert('Oops! There was a problem submitting your form. Please try again or email sarah@djsarahchapman.com directly.');
+    } finally {
       button.innerHTML = originalText;
       button.disabled = false;
-    }, 2000);
+    }
   });
 }
 
