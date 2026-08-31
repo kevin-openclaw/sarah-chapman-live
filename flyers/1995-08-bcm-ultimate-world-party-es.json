@@ -1,0 +1,49 @@
+{
+  "id": "1995-08-bcm-ultimate-world-party-es",
+  "title": "BCM Planet Dance",
+  "subtitle": "The Ultimate World Party (Spanish Edition)",
+  "date": "19 August 1995",
+  "venue": {
+    "name": "BCM Planet Dance (Factory House)",
+    "location": "Magalluf, Mallorca",
+    "collaboration": "Spanish-language flyer edition"
+  },
+  "image": {
+    "frontFilename": "1995-08-bcm-ultimate-world-party-es-front.jpg",
+    "backFilename": "1995-08-bcm-ultimate-world-party-es-back.jpg"
+  },
+  "residents": [
+    "Damon",
+    "Ricky",
+    "Gordon Phillips",
+    "Fernandito"
+  ],
+  "guests": [
+    {
+      "name": "Sarah Chapman",
+      "featured": true
+    },
+    {
+      "name": "Daniele Davoli",
+      "affiliation": "Black Box"
+    },
+    {
+      "name": "Janet & Tracey",
+      "affiliation": "Girls 2 Gether"
+    }
+  ],
+  "seo": {
+    "djs": [
+      "Sarah Chapman",
+      "Daniele Davoli",
+      "Janet & Tracey",
+      "Damon",
+      "Ricky",
+      "Gordon Phillips",
+      "Fernandito"
+    ],
+    "venues": ["BCM Planet Dance", "Factory House", "Magalluf"],
+    "promoters": [],
+    "keywords": ["Mallorca", "1995", "The Ultimate World Party", "Black Box", "Spanish edition"]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "1995-08-bcm-planet-dance",
+  "title": "BCM Planet Dance",
+  "subtitle": "The Sun & Dance Nights",
+  "date": "August 1995",
+  "venue": {
+    "name": "BCM Planet Dance (Factory House)",
+    "location": "Magalluf, Mallorca",
+    "collaboration": "Tony Palmer's Planet Dance & Club UK (Chris Groves)"
+  },
+  "image": {
+    "frontFilename": "1995-08-bcm-planet-dance-front.jpg",
+    "backFilename": "1995-08-bcm-planet-dance-back.jpg"
+  },
+  "residents": [
+    "Ely",
+    "Biko",
+    "Gordon Phillips",
+    "Rad Damon",
+    "J.Jules",
+    "Ricky"
+  ],
+  "guests": [
+    {
+      "name": "Sarah Chapman",
+      "affiliation": "Multiple dates",
+      "featured": true
+    },
+    {
+      "name": "Pete Wardman",
+      "affiliation": "100 Kiss FM + Club UK"
+    },
+    {
+      "name": "Darren Emerson",
+      "affiliation": "Ministry + Underworld"
+    },
+    {
+      "name": "Daniele Davoli",
+      "affiliation": "N° 1 Italia DJ Black Box"
+    }
+  ],
+  "schedule": [
+    {
+      "date": "Sunday 20th",
+      "lineup": ["Pete Wardman", "Sarah Chapman"]
+    },
+    {
+      "date": "Monday 21st",
+      "lineup": ["Darren Emerson", "Daniele Davoli"]
+    },
+    {
+      "date": "Tuesday 22nd",
+      "lineup": ["Darren Emerson", "Sarah Chapman"]
+    },
+    {
+      "date": "Wednesday 23rd",
+      "lineup": ["Pete Wardman", "Darren Emerson"]
+    }
+  ],
+  "sarahAppearances": [
+    "Sunday 20th August 1995",
+    "Tuesday 22nd August 1995"
+  ],
+  "seo": {
+    "djs": [
+      "Sarah Chapman",
+      "Pete Wardman",
+      "Darren Emerson",
+      "Daniele Davoli",
+      "Ely",
+      "Biko",
+      "Gordon Phillips",
+      "Rad Damon",
+      "J.Jules",
+      "Ricky"
+    ],
+    "venues": ["BCM Planet Dance", "Factory House", "Magalluf"],
+    "promoters": ["Tony Palmer", "Club UK", "Chris Groves"],
+    "keywords": ["Mallorca", "1995", "Dance Nights", "The Sun", "Underworld", "Ministry", "Black Box", "Kiss FM 100"]
+  }
+}

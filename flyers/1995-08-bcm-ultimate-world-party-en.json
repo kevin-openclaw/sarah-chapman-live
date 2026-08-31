@@ -1,0 +1,56 @@
+{
+  "id": "1995-08-bcm-ultimate-world-party-en",
+  "title": "BCM Planet Dance",
+  "subtitle": "The Ultimate World Party",
+  "date": "17-18 August 1995",
+  "venue": {
+    "name": "BCM Planet Dance (Factory House)",
+    "location": "Magalluf, Mallorca",
+    "collaboration": "In association with Muzik Magazine"
+  },
+  "image": {
+    "frontFilename": "1995-08-bcm-ultimate-world-party-en-front.jpg",
+    "backFilename": "1995-08-bcm-ultimate-world-party-en-back.jpg"
+  },
+  "residents": [
+    "Ely",
+    "Gordon Phillips",
+    "Damon"
+  ],
+  "guests": [
+    {
+      "name": "Sarah Chapman",
+      "featured": true
+    },
+    {
+      "name": "Danny Rampling",
+      "affiliation": "BBC Radio One"
+    },
+    {
+      "name": "Daniele Davoli",
+      "affiliation": "N\u00b0 1 Italia DJ Black Box"
+    },
+    {
+      "name": "Fat Tony"
+    },
+    {
+      "name": "Janet & Tracey",
+      "affiliation": "Girls 2 Gether"
+    }
+  ],
+  "seo": {
+    "djs": [
+      "Sarah Chapman",
+      "Danny Rampling",
+      "Daniele Davoli",
+      "Fat Tony",
+      "Janet & Tracey",
+      "Ely",
+      "Gordon Phillips",
+      "Damon"
+    ],
+    "venues": ["BCM Planet Dance", "Factory House", "Magalluf"],
+    "promoters": ["Muzik Magazine"],
+    "keywords": ["Mallorca", "1995", "The Ultimate World Party", "BBC Radio One", "Black Box"]
+  }
+}
