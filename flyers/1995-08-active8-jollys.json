@@ -1,0 +1,27 @@
+{
+  "id": "1995-08-active8-jollys",
+  "title": "Active 8 Promotions",
+  "subtitle": "A Night of Uplifting and Harder House",
+  "date": "11 August 1995",
+  "venue": {
+    "name": "Jolly's Nightclub",
+    "location": "Chapel Road, Southampton",
+    "collaboration": "Active 8 Promotions"
+  },
+  "image": {
+    "frontFilename": "1995-08-active8-jollys-front.jpg",
+    "backFilename": "1995-08-active8-jollys-back.jpg"
+  },
+  "guests": [
+    { "name": "Sarah Chapman", "affiliation": "Tonic, Pure Sex", "featured": true },
+    { "name": "Mr. Hyde", "affiliation": "Cert. 18" },
+    { "name": "Stuart Joseph", "affiliation": "Nu-Energy / Saturdays at Madisons" },
+    { "name": "Gary Benneton", "affiliation": "Menage a Trois" }
+  ],
+  "seo": {
+    "djs": ["Sarah Chapman", "Mr. Hyde", "Stuart Joseph", "Gary Benneton"],
+    "venues": ["Jolly's Nightclub", "Southampton"],
+    "promoters": ["Active 8 Promotions"],
+    "keywords": ["Southampton", "1995", "Uplifting House", "Harder House", "Tonic", "Pure Sex"]
+  }
+}

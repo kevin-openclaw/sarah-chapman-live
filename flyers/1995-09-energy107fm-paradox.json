@@ -1,0 +1,28 @@
+{
+  "id": "1995-09-energy107fm-paradox",
+  "title": "Energy Radio House Night",
+  "subtitle": "Energy 107FM presents",
+  "date": "6 September 1995",
+  "venue": {
+    "name": "The Paradox",
+    "location": "West Street, Brighton",
+    "collaboration": "Energy 107FM - Brighton's Largest Dance Station"
+  },
+  "image": {
+    "frontFilename": "1995-09-energy107fm-paradox-front.jpg",
+    "backFilename": "1995-09-energy107fm-paradox-back.jpg"
+  },
+  "guests": [
+    { "name": "Jeremy Healy" },
+    { "name": "Andy Mac" },
+    { "name": "Chad & Rich", "affiliation": "Mansion House" },
+    { "name": "Emma Cooter" },
+    { "name": "Sarah Chapman", "featured": true }
+  ],
+  "seo": {
+    "djs": ["Sarah Chapman", "Jeremy Healy", "Andy Mac", "Chad & Rich", "Emma Cooter"],
+    "venues": ["The Paradox", "Brighton"],
+    "promoters": ["Energy 107FM"],
+    "keywords": ["Brighton", "1995", "Energy Radio", "House Night", "West Street"]
+  }
+}

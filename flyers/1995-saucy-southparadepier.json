@@ -1,0 +1,40 @@
+{
+  "id": "1995-saucy-southparadepier",
+  "title": "Saucy presents",
+  "subtitle": "Bass X Garage",
+  "date": "1995 (weekly Thursdays)",
+  "venue": {
+    "name": "South Parade Pier",
+    "location": "Southampton area",
+    "collaboration": "Saucy Tunes"
+  },
+  "image": {
+    "frontFilename": "1995-saucy-southparadepier-front.jpg",
+    "backFilename": "1995-saucy-southparadepier-back.jpg"
+  },
+  "guests": [
+    { "name": "Sarah Chapman", "featured": true },
+    { "name": "Martin S." },
+    { "name": "Triggss" },
+    { "name": "Jason Wiltshire" },
+    { "name": "Bongo Pete" },
+    { "name": "DJ Digit", "affiliation": "San Francisco" },
+    { "name": "DJ Buck", "affiliation": "USA" },
+    { "name": "Pete Cozzens" },
+    { "name": "DJ Leo" }
+  ],
+  "notes": "Back panel references a Saucy Tunes label release 'Disco Frenzy/Tart' AA-side credited to Sarah + Simon Chapman. CONFIRMED (31 Aug 2026) by Simon \u2014 this IS him. Genuine personal connection: Simon co-released a record with Sarah Chapman on the Saucy Tunes label back in the 90s.",
+  "personalConnection": {
+    "confirmed": true,
+    "releaseTitle": "Disco Frenzy / Tart",
+    "format": "AA-side",
+    "label": "Saucy Tunes",
+    "artists": "Sarah + Simon Chapman"
+  },
+  "seo": {
+    "djs": ["Sarah Chapman", "Martin S.", "Triggss", "Jason Wiltshire", "Bongo Pete", "DJ Digit", "DJ Buck", "Pete Cozzens", "DJ Leo"],
+    "venues": ["South Parade Pier", "Southampton"],
+    "promoters": ["Saucy Tunes"],
+    "keywords": ["Southampton", "1995", "Bass Garage", "Saucy Tunes", "South Parade Pier", "Disco Frenzy", "Tart", "Sarah and Simon Chapman"]
+  }
+}

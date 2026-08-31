@@ -1,0 +1,32 @@
+{
+  "id": "1995-09-pavarotti-cornexchange",
+  "title": "Pavarotti",
+  "subtitle": "A Night of Phat Uplifting House Tunes",
+  "date": "1 September 1995",
+  "venue": {
+    "name": "Brighton Corn Exchange",
+    "location": "Brighton",
+    "collaboration": "Originale Produzione presenta..."
+  },
+  "image": {
+    "frontFilename": "1995-09-pavarotti-cornexchange-front.jpg",
+    "backFilename": "1995-09-pavarotti-cornexchange-back.jpg"
+  },
+  "guests": [
+    { "name": "Graham Gold", "affiliation": "Kiss FM, Leisure Lounge, Ibiza" },
+    { "name": "LuvDup", "affiliation": "Home Manchester, Rise Sheffield" },
+    { "name": "Steve Harvey", "affiliation": "Club UK" },
+    { "name": "Sarah Chapman", "featured": true },
+    { "name": "Paul Hillyer" }
+  ],
+  "otherActs": [
+    "Carol Bailey - Live PA \"Feel It\" (courtesy of Multiply Records)",
+    "Cleavage City - Back to the Old Skool room"
+  ],
+  "seo": {
+    "djs": ["Sarah Chapman", "Graham Gold", "LuvDup", "Steve Harvey", "Paul Hillyer"],
+    "venues": ["Brighton Corn Exchange", "Brighton"],
+    "promoters": ["Originale Produzione"],
+    "keywords": ["Brighton", "1995", "Corn Exchange", "Kiss FM", "Ibiza", "Multiply Records"]
+  }
+}
